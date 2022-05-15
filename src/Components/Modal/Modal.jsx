@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './modal.scss'
 import Data from "../../Data";
+import { Link } from 'react-router-dom';
 
 function Modal({fileValue, setModalUse, theme}) {
     const [ loading ] = useState(true);
@@ -33,13 +34,13 @@ function Modal({fileValue, setModalUse, theme}) {
                 </div>
             )}
 
-            <a 
-                href='#' 
+            <Link 
+                to={'#'} 
                 className="modal__btn" 
                 style={{backgroundColor: `${arr.color}`}} 
                 >
                 <i className='bx bx-down-arrow-alt'></i>  Download file
-            </a>
+            </Link>
         </div>
     </div>
   )
