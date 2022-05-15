@@ -1,0 +1,76 @@
+@import "../../SCSS/mixin.scss";
+
+.header{
+    padding: 20px 0;
+    background-color: #fff;
+    box-shadow: 0px 20px 25px -5px rgba(0,0,0, 0.1), 0px 10px 10px -5px rgba(0,0,0, 0.04);
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+
+    &__block{
+        @include flex(center, space-between);
+    }
+
+    &__logo{
+        @include flex(center, center);
+        @include title(24px);
+
+        svg {
+            margin-right: 10px;
+            fill: blue;
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        @include title(30px);
+    }
+
+    &__right {
+        button {
+            background-color: transparent;
+            padding: 8px 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            color: blue; 
+            border: 1px solid blue;
+        }
+    }
+}
+
+
+.header.dark{
+    background-color: #333;
+    box-shadow: rgba(255,255,255, 0.35) 0px 5px 15px;
+    // box-shadow: 0px 20px 25px -5px rgba(255,255,255, 0.1), 0px 10px 10px -5px rgba(255,255,255, 0.04);
+
+    .header__logo{
+        color: #fff;
+
+        svg{
+            fill: #FF5722 !important;
+        }
+    }
+
+    .header__title{
+        color: #fff;
+    }
+
+    .header__right{
+        button{
+            color: #fff;
+            border: 1px solid #FF5722;
+        }
+    }
+}
+
+@media only screen and (max-width: 516px){
+    .header{
+        width: 100%;
+
+        &__title{
+            display: none;
+        }
+    }
+}
