@@ -13,7 +13,7 @@ const Files = [
         titleT: "word to pdf",
         titleF: "pdf to word",
         file: ".doc",
-        filePdf: ".ppt, .pptx",
+        filePdf: ".pdf",
         color: "#1565C0" 
     },
     {
@@ -22,7 +22,7 @@ const Files = [
         label: "excel",
         titleT: "excel to pdf",
         titleF: "pdf to excel",
-        filePdf: ".ppt, .pptx",
+        filePdf: ".pdf",
         file: ".csv, .xls, .xlsb, .xlt, .xltx, .xlsx",
         color: "#2E7D32" 
     },
@@ -32,7 +32,7 @@ const Files = [
         label: "powerpoint",
         titleT: "PowerPoint to pdf",
         titleF: "pdf to PowerPoint",
-        filePdf: ".ppt, .pptx",
+        filePdf: ".pdf",
         file: ".pot, .potx, .pps, .ppsx, .ppt, .pptx",
         color: "#FF5722" 
     },
@@ -43,7 +43,7 @@ const Files = [
         titleT: "JPG to pdf",
         titleF: "pdf to JPG",
         file: "image/*",
-        filePdf: ".ppt, .pptx",
+        filePdf: ".pdf",
         color: "#26B99A" 
     },
     {
@@ -53,7 +53,7 @@ const Files = [
         titleT: "iWord to pdf",
         titleF: "pdf to iWord",
         file: ".key, .numbers, .pages",
-        filePdf: ".ppt, .pptx",
+        filePdf: ".pdf",
         color: "#05CDFF" 
     },
     {
@@ -63,7 +63,7 @@ const Files = [
         titleT: "eBooks to pdf",
         titleF: "pdf to eBooks",
         file: ".azv, .azv1, .azv3, .azv4, .epub, .mobi, .prc, .tpz, .lit, .cbz, .cbr, .cbc, .chm, .djvu, .lrf, .prc, .pml, .snb, .tcr",
-        filePdf: ".ppt, .pptx",
+        filePdf: ".pdf",
         color: "#F55A8E"  
     },
 ]
