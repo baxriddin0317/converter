@@ -7,7 +7,7 @@ import Modal from './Components/Modal/Modal';
 import Files from './Data';
 
 function App() {
-  const [ fileValue, setFileValue ] = useState(1);
+  const [ fileValue, setFileValue ] = useState();
 
   const [ modalUse, setModalUse ] = useState(false);
   // ==== theme useState ====

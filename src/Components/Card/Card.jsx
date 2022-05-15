@@ -7,8 +7,13 @@ function Card({arr, Setvalue, setModalUse, theme}) {
   const inputFile = useRef();
 
   const labelChange = (e) => {
-    setModalUse(1);
-    Setvalue(arr.id);
+    setModalUse(true);
+    Setvalue(
+      {
+        id: arr.id,
+        name: e.target.files[0].name,
+      }
+    );
   }
 
   return (
@@ -24,7 +29,12 @@ function Card({arr, Setvalue, setModalUse, theme}) {
         <i className={btnTrue ? `bx bx-transfer-alt i` : `bx bx-transfer-alt j`} ></i> { btnTrue ? arr.titleF : arr.titleT }
       </button>
       <form action="#" className='hidden' encType='multipart/form-data'>
-        <input type="file" ref={inputFile} id={arr.label} accept={btnTrue ? arr.file : arr.filePdf} onInput={(e) => labelChange(e)} />
+        <input 
+          type="file" 
+          ref={inputFile} 
+          id={arr.label} 
+          accept={btnTrue ? arr.file : arr.filePdf} 
+          onChange={(e) => labelChange(e)} />
       </form>
     </li>
   )

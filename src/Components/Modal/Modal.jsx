@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 function Modal({fileValue, setModalUse, theme}) {
     const [ loading ] = useState(true);
 
-    let arr = Data.find(e => e.id === fileValue);
+    let arr = Data.find(e => e.id === fileValue.id);
 
     const modalClick = () => {
-        setModalUse(0);
+        setModalUse(false);
     }
 
   return (
@@ -17,13 +17,14 @@ function Modal({fileValue, setModalUse, theme}) {
         className={`modal ${theme}`} 
         onClick={modalClick}    
     >
-        <span className='modal__arrow' onClick={() => modalClick()}>
-        <i className='bx bx-arrow-back'></i>
+        <span className='modal__arrow' onClick={modalClick}>
+            <i className='bx bx-arrow-back'></i>
         </span>
         <div className="modal__content">
             <div className="modal__img">
                 <img src={arr.img} alt="" />
             </div>
+            <h2>{fileValue.name}</h2>
             
             {loading && (
                 <div className="modal__load">
@@ -39,7 +40,7 @@ function Modal({fileValue, setModalUse, theme}) {
                 className="modal__btn" 
                 style={{backgroundColor: `${arr.color}`}} 
                 >
-                <i className='bx bx-down-arrow-alt'></i>  Download file
+                    <i className='bx bx-down-arrow-alt'></i>  Download file
             </Link>
         </div>
     </div>
