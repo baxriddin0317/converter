@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useRef, useState } from 'react';
 import './card.scss';
 
@@ -14,6 +15,18 @@ function Card({arr, Setvalue, setModalUse, theme}) {
         name: e.target.files[0].name,
       }
     );
+
+    // ===== axios dan fayl yuborilishi =====
+    axios.post("https://jsonplaceholder.typicode.com/posts", {
+        lastModified: e.target.files[0].lastModified,
+        name: e.target.files[0].name,
+        size: e.target.files[0].size,
+        type: e.target.files[0].type  
+    }).then(e => {
+      console.log(e)
+    })
+
+
   }
 
   return (
@@ -25,7 +38,11 @@ function Card({arr, Setvalue, setModalUse, theme}) {
       <label className='card__btn' style={{backgroundColor: `${arr.color}`, color: "#fff"}} htmlFor={arr.label} >
         + choose file
       </label>
-      <button className="card__btn" style={{border: `2px solid ${arr.color}`, color: `${arr.color}`}} onClick={() => setBtnTrue(!btnTrue)}>
+      <button 
+        className={arr.qiymat ? "card__btn" : "card__btn disabled"} 
+        style={{border: `2px solid ${arr.color}`, color: `${arr.color}`}} 
+        onClick={() => arr.qiymat ? setBtnTrue(!btnTrue) : null}
+      >
         <i className={btnTrue ? `bx bx-transfer-alt i` : `bx bx-transfer-alt j`} ></i> { btnTrue ? arr.titleF : arr.titleT }
       </button>
       <form action="#" className='hidden' encType='multipart/form-data'>

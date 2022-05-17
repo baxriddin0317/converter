@@ -40,7 +40,7 @@ ul{
 .cards{
     text-align: center;
     padding-bottom: 30px;
-    border-bottom: 1px solid rgb(148, 148, 148);
+    margin-bottom: 50px;
 
     &__title{
         @include title(30px);
