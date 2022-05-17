@@ -38,13 +38,15 @@ function Card({arr, Setvalue, setModalUse, theme}) {
       <label className='card__btn' style={{backgroundColor: `${arr.color}`, color: "#fff"}} htmlFor={arr.label} >
         + choose file
       </label>
-      <button 
-        className={arr.qiymat ? "card__btn" : "card__btn disabled"} 
+
+      {arr.qiymat && <button 
+        className="card__btn" 
         style={{border: `2px solid ${arr.color}`, color: `${arr.color}`}} 
         onClick={() => arr.qiymat ? setBtnTrue(!btnTrue) : null}
       >
         <i className={btnTrue ? `bx bx-transfer-alt i` : `bx bx-transfer-alt j`} ></i> { btnTrue ? arr.titleF : arr.titleT }
-      </button>
+      </button>}
+
       <form action="#" className='hidden' encType='multipart/form-data'>
         <input 
           type="file" 

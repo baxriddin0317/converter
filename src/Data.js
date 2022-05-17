@@ -67,7 +67,7 @@ const Files = [
         titleF: "pdf to iWord",
         file: ".key, .numbers, .pages",
         filePdf: ".pdf",
-        color: "#05CDFF",
+        color: "#0485BD",
         qiymat: true 
     },
     {
