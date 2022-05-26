@@ -11,6 +11,13 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+.App{
+    // height: 100vh;
+    // justify-content: space-between;
+    // display: flex;
+    // flex-direction: column;
+}
+
 .container {
      max-width: 1230px;
      margin: 0 auto;
@@ -31,7 +38,9 @@ ul{
 
 .main.dark{
     background-color: rgb(24, 24, 24);
+}
 
+.dark {
     .cards__title{
         color: #fff;
     }
@@ -45,6 +54,7 @@ ul{
     &__title{
         @include title(30px);
         margin-bottom: 30px;
+        text-align: center;
     }
 
     &__list{

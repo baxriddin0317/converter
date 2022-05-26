@@ -1,18 +1,21 @@
 import axios from 'axios';
 import React, { useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './card.scss';
 
 
-function Card({arr, Setvalue, setModalUse, theme}) {
+function Card({arr, setFileVal, theme}) {
   const [ btnTrue, setBtnTrue ] = useState(true);
+  const navigator = useNavigate();
   const inputFile = useRef();
 
   const labelChange = (e) => {
-    setModalUse(true);
-    Setvalue(
+    navigator(btnTrue ? `${arr.linkT}` : `${arr.linkF}`)
+    setFileVal(
       {
-        id: arr.id,
-        name: e.target.files[0].name,
+        id: 0,
+        fileId: arr.id,
+        name: e.target.files[0].name
       }
     );
 

@@ -1,0 +1,129 @@
+.modal{
+    position: relative;
+    padding: 80px 0; 
+      
+      &__img {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        width: 250px;
+        img{
+          width: 100%;
+        }
+      }
+  
+      &__name{
+        margin: 0 auto;
+        width: 400px;
+  
+        div{
+          margin: 0 auto;
+          width: 200px;
+          margin-bottom: 10px;
+          height: 200px;
+          background-color: #fff;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+  
+        h2{
+          text-align: center;
+        }
+      }
+  
+      &__btn{
+        width: 250px;
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 40px;
+        border: none;
+        color: #fff;
+        text-transform: capitalize;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+  
+        i{
+            font-size: 20px;
+            margin-right: 10px;
+        }
+    }
+    
+      &__load{
+          .spinner {
+              margin: 100px auto;
+              width: 40px;
+              height: 40px;
+              position: relative;
+            }
+            
+            .cube1, .cube2 {
+              // background-color: #333;
+              width: 15px;
+              height: 15px;
+              position: absolute;
+              top: 0;
+              left: 0;
+              
+              -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
+              animation: sk-cubemove 1.8s infinite ease-in-out;
+            }
+            
+            .cube2 {
+              -webkit-animation-delay: -0.9s;
+              animation-delay: -0.9s;
+            }
+            
+            @-webkit-keyframes sk-cubemove {
+              25% { -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5) }
+              50% { -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg) }
+              75% { -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
+              100% { -webkit-transform: rotate(-360deg) }
+            }
+            
+            @keyframes sk-cubemove {
+              25% { 
+                transform: translateX(42px) rotate(-90deg) scale(0.5);
+                -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+              } 50% { 
+                transform: translateX(42px) translateY(42px) rotate(-179deg);
+                -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+              } 50.1% { 
+                transform: translateX(42px) translateY(42px) rotate(-180deg);
+                -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+              } 75% { 
+                transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+                -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+              } 100% { 
+                transform: rotate(-360deg);
+                -webkit-transform: rotate(-360deg);
+              }
+            }
+      }
+  }
+  
+  .modal.dark{
+    background-color: rgba(#333, 0.6);
+  
+    .modal__content{
+      background-color: rgb(97, 97, 97);
+    }
+  }
+  
+  @media only screen and (max-width: 820px){
+    .modal{
+      &__content{
+        width: 100%;
+        padding: 50px 0;
+      }
+  
+      &__img{
+        width: 150px;
+      }
+  
+      &__arrow{
+        color: #000000;
+      }
+    }
+  }

@@ -9,10 +9,7 @@ import Merge from "./Img/merge.png";
 import Split from "./Img/split.png";
 import Protect from "./Img/lock.png";
 import Unlock from "./Img/unlocked.png";
-import Converter from "./Img/convert.png";
-import Compres from "./Img/compres.png";
 import Delete from "./Img/remove.png";
-import Rotate from "./Img/rotate.png";
 
 const Files = [
     {
@@ -21,6 +18,8 @@ const Files = [
         label: "word",
         titleT: "word to pdf",
         titleF: "pdf to word",
+        linkT: "word-to-pdf",
+        linkF: "pdf-to-word",
         file: ".doc",
         filePdf: ".pdf",
         color: "#1565C0",
@@ -32,6 +31,8 @@ const Files = [
         label: "excel",
         titleT: "excel to pdf",
         titleF: "pdf to excel",
+        linkT: "excel-to-pdf",
+        linkF: "pdf-to-excel",
         filePdf: ".pdf",
         file: ".csv, .xls, .xlsb, .xlt, .xltx, .xlsx",
         color: "#2E7D32",
@@ -43,6 +44,8 @@ const Files = [
         label: "powerpoint",
         titleT: "PowerPoint to pdf",
         titleF: "pdf to PowerPoint",
+        linkT: "powerpoint-to-pdf",
+        linkF: "pdf-to-powerpoint",
         filePdf: ".pdf",
         file: ".pot, .potx, .pps, .ppsx, .ppt, .pptx",
         color: "#FF5722",
@@ -54,6 +57,8 @@ const Files = [
         label: "jpg",
         titleT: "JPG to pdf",
         titleF: "pdf to JPG",
+        linkT: "jpg-to-pdf",
+        linkF: "pdf-to-jpg",
         file: "image/*",
         filePdf: ".pdf",
         color: "#26B99A",
@@ -65,6 +70,8 @@ const Files = [
         label: "iword",
         titleT: "iWord to pdf",
         titleF: "pdf to iWord",
+        linkT: "iword-to-pdf",
+        linkF: "pdf-to-iword",
         file: ".key, .numbers, .pages",
         filePdf: ".pdf",
         color: "#0485BD",
@@ -76,6 +83,8 @@ const Files = [
         label: "ebook",
         titleT: "eBooks to pdf",
         titleF: "pdf to eBooks",
+        linkT: "ebooks-to-pdf",
+        linkF: "pdf-to-ebooks",
         file: ".azv, .azv1, .azv3, .azv4, .epub, .mobi, .prc, .tpz, .lit, .cbz, .cbr, .cbc, .chm, .djvu, .lrf, .prc, .pml, .snb, .tcr",
         filePdf: ".pdf",
         color: "#F55A8E",
@@ -87,6 +96,8 @@ const Files = [
         label: "pdf",
         titleT: "PDF to PDF/A",
         titleF: "PDF/A to PDF",
+        linkT: "pdfa-to-pdf",
+        linkF: "pdf-to-pdfa",
         file: ".pdf",
         filePdf: ".pdf",
         color: "#E93827",
@@ -97,7 +108,7 @@ const Files = [
         img: Merge,
         label: "merge",
         titleT: "Marge PDF",
-        titleF: "pdf to eBooks",
+        linkT: "merge",
         file: ".pdf",
         filePdf: ".pdf",
         color: "#1BB7EA",
@@ -108,7 +119,7 @@ const Files = [
         img: Split,
         label: "split",
         titleT: "Split PDF",
-        titleF: "pdf to eBooks",
+        linkT: "split",
         file: ".pdf",
         filePdf: ".pdf",
         color: "#F57F17",
@@ -119,7 +130,7 @@ const Files = [
         img: Protect,
         label: "Protect",
         titleT: "protect PDF",
-        titleF: "pdf to eBooks",
+        linkT: "protect",
         file: ".pdf",
         filePdf: ".pdf",
         color: "#426274",
@@ -131,6 +142,7 @@ const Files = [
         label: "unclock",
         titleT: "unclock PDF",
         titleF: "pdf to eBooks",
+        linkT: "unclock",
         file: ".pdf",
         filePdf: ".pdf",
         color: "#8EE26B",
@@ -138,48 +150,16 @@ const Files = [
     },
     {
         id: 12,
-        img: Converter,
-        label: "converter",
-        titleT: "PDF converter",
-        titleF: "pdf to eBooks",
-        file: ".pdf",
-        filePdf: ".pdf",
-        color: "#333940",
-        qiymat: false  
-    },
-    {
-        id: 13,
-        img: Compres,
-        label: "compres",
-        titleT: "compress PDf",
-        titleF: "pdf to eBooks",
-        file: ".pdf",
-        filePdf: ".pdf",
-        color: "#FF6B6B",
-        qiymat: false  
-    },
-    {
-        id: 14,
         img: Delete,
         label: "delete",
         titleT: "Delete PDF Pages",
         titleF: "pdf to eBooks",
+        linkT: "delete",
         file: ".pdf",
         filePdf: ".pdf",
         color: "#F44336",
         qiymat: false  
-    },
-    {
-        id: 15,
-        img: Rotate,
-        label: "rotate",
-        titleT: "Rotate PDF",
-        titleF: "pdf to eBooks",
-        file: ".pdf",
-        filePdf: ".pdf",
-        color: "#0CB0FF",
-        qiymat: false  
-    },
+    }
 ]
 
 export default Files;
